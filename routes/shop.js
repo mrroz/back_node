@@ -2,11 +2,12 @@ const express = require('express')
 
 const router = express.Router()
 
-const productController = require('../controllers/products')
+const shopetController = require('../controllers/shopControllers')
 
 
 
-router.get('/', productController.showProduct)
+
+router.get('/', shopetController.showProduct)
 
 
 
