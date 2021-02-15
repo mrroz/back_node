@@ -1,4 +1,4 @@
-const products = []
+const productss = require('../models/singel-product')
 
 module.exports.ProductPage = (req, res) => {
     res.render('add-pro')
@@ -7,8 +7,9 @@ module.exports.ProductPage = (req, res) => {
 
 
 module.exports.addProduct = (req, res) => {
-    products.push({ title: req.body.title })
-    console.log(products)
+    const product6 = new productss(req.body.title)
+    product6.saveProductData()
+    console.log(product6)
     res.redirect('/')
 
 }
@@ -16,9 +17,10 @@ module.exports.addProduct = (req, res) => {
 
 
 module.exports.showProduct = (req, res) => {
+    const product5 = productss.showAllproducts()
     res.render('shop', {
         pagetitle: 'shoproz',
-        productArray: products
+        productArray: product5
 
     })
 }

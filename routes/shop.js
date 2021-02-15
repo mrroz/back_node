@@ -6,6 +6,7 @@ const productController = require('../controllers/products')
 
 
 
+
 router.get('/', productController.showProduct)
 
 

@@ -12,7 +12,7 @@ router.post('/add-product', productController.addProduct)
 
 
 ////////////////////////////////////////////////////////////////                               exports
-// exports.routes = router
+//morteza roozbehi// exports.routes = router
 // exports.product = products
 
 module.exports = router
