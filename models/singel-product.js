@@ -6,14 +6,11 @@ module.exports = class Product {
         this.title = title
     }
 
-
-    saveProductData() {
+    saveProduct() {
         products.push(this)
-
     }
 
-    static showAllproducts() {
-
+    static showAllproduct() {
         return products
     }
 
