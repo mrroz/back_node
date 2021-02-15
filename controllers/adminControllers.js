@@ -1,13 +1,14 @@
 const productss = require('../models/singel-product')
 
 module.exports.ProductPage = (req, res) => {
-    res.render('add-pro')
+    res.render('adminViews/add-pro')
 
 }
 
 module.exports.addProduct = (req, res) => {
     const product6 = new productss(req.body.title)
+    const p = productss.showAllproduct()
     product6.saveProduct()
-    console.log(product6)
+    console.log(p)
     res.redirect('/')
 }
