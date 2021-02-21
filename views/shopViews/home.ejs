@@ -1,0 +1,31 @@
+<%-include('../includes/header.ejs')%>
+
+    <div class="container">
+
+        <p>محصولات</p>
+    </div>
+
+    <p>salam</p>
+
+    <% if(productArray.lengh != 0) {%>
+
+        <p> list is  full</p>
+
+         <% for (let conter of productArray) {%>
+
+     <p> نام محصول :  <%=conter.title%> </p>
+     <p> توضيحات : <%=conter.desc%> </p>
+     <p> قيمت :  <%=conter.price%> </p>
+     <br>
+     <p>**********************************</p>
+     <br>
+
+     <%}%>
+
+
+     <% } else {%>
+
+         <p>not product </p>
+    <%}%>
+
+<%-include('../includes/footer.ejs')%>

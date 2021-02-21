@@ -10,6 +10,8 @@ router.get('/add-product', adminControllers.ProductPage)
 
 router.post('/add-product', adminControllers.addProduct)
 
+router.get('/product', adminControllers.showProduct)
+
 
 
 ////////////////////////////////////////////////////////////////                               exports

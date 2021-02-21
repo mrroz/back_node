@@ -11,13 +11,11 @@
   <h4 class="card-title"><%=productinfo.title%></h4>
   <p class="card-text"><%=productinfo.descerption%></p>
   <p class="card-text"><%=productinfo.price%></p>
-  <form action="/edite" method ="POST">
-      <button >    تغير </button>
-      <br>
-      <br>
-      <button >    حذف </button>
-      
+  <p class="card-text"><%=productinfo.id%></p>
+  <form action="/add-to-card" method ="POST">
+      <button >   اضاف به سبدخريد</button>
   </form>
+
 
   <br>
   <br>

@@ -16,6 +16,7 @@ app.use('/admin', adminRoutes)
 app.use(shopData)
 
 
+//app.use(express.static('public'))
 // app.use(express.urlencoded({ extended: true }))
 
 
