@@ -42,6 +42,16 @@ module.exports.checkout = (req, res) => {
 }
 
 
+module.exports.addToCard = (req, res) => {
+
+    const pid = req.body.pid
+    console.log(pid);
+    res.redirect('/')
+
+
+}
+
+
 module.exports.oneproduct = (req, res) => {
     const id = req.params.id
     console.log(id);

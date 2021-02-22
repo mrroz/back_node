@@ -18,7 +18,8 @@ router.get('/products/:id', shopetController.oneproduct)
 
 router.get('/checkout', shopetController.checkout)
 
-router.post('/add-to-card', shopetController.checkout)
+router.post('/add-to-card', shopetController.addToCard)
+    //router.get('/add-to-card/:id', shopetController.oneproduct)
 
 
 

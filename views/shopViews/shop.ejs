@@ -12,9 +12,7 @@
   <p class="card-text"><%=productinfo.descerption%></p>
   <p class="card-text"><%=productinfo.price%></p>
   <p class="card-text"><%=productinfo.id%></p>
-  <form action="/add-to-card" method ="POST">
-      <button >   اضاف به سبدخريد</button>
-  </form>
+ <%-include('../includes/add-to-cart.ejs',{productinfo:productinfo})%>
 
 
   <br>
