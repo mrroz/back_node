@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const mongodbConnect = require('./util/database').mongodbConnect
 const path = require('path')
 
 app.use(bodyParser.json());
@@ -28,8 +29,10 @@ app.use((req, res) => {
 
 
 
+mongodbConnect(() => {
+    app.listen(3000, console.log('yees'))
+})
 
-app.listen(3000)
 
 
 //morteza roozbehi
