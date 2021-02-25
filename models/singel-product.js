@@ -30,7 +30,7 @@ class Product {
                 console.log(result)
                 return result
             }).catch((err) => {
-                console.log(err)
+                console.log('خطدر نمايش محصولات')
 
             });
     }
@@ -48,6 +48,19 @@ class Product {
 
             });
 
+
+    }
+
+
+    static deleteOne(id) {
+        const db = getDB()
+        return db.collection('product').deleteOne({ _id: mongodb.ObjectID(id) })
+            .then((result) => {
+                console.log('deletedddddddddddddd');
+
+            }).catch((err) => {
+                console.log('حذف نشد');
+            });
 
     }
 

@@ -12,10 +12,8 @@ module.exports.addProduct = (req, res) => {
     const product6 = new productss(title, desc, price)
     product6.saveProduct()
         .then((result) => {
-
             console.log('product created!!!' + result);
             res.redirect('/admin/add-product')
-
         }).catch((err) => {
             console.log("ssssssssssssssssssssssssss");
 
@@ -23,13 +21,30 @@ module.exports.addProduct = (req, res) => {
 }
 
 
-module.exports.showProduct = (req, res) => {
+module.exports.deleteOne = (req, res) => {
+    const id = req.body.id
+    productss.deleteOne(id)
+        .then((result) => {
+            console.log('حذف شد');
+            res.redirect('/admin/product')
+        }).catch((err) => {
+            console.log('حذف نشددددد');
 
-    const p = productss.showAllproduct()
-    res.render('adminViews/product', {
-        pagetitle: "محصولات ادمين",
-        product: p,
-    })
+        });
+
+}
+
+
+module.exports.showProduct = (req, res) => {
+    productss.showAllproduct()
+        .then((result) => {
+            res.render('adminViews/product', {
+                pagetitle: "محصولات ادمين",
+                product: result,
+            })
+        }).catch((err) => {
+            console.log('خطا در نمايش محصولات ادمين');
+        });
 
 
 

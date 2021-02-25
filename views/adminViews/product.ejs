@@ -11,13 +11,14 @@
   <h4 class="card-title"><%=productinfo.title%></h4>
   <p class="card-text"><%=productinfo.descerption%></p>
   <p class="card-text"><%=productinfo.price%></p>
-  <form action="/edite" method ="POST">
-      <button >    تغير </button>
-      <br>
-      <br>
-      <button >    حذف </button>
-      
-  </form>
+  <p class="card-text"><%=productinfo.id%></p>
+   <a href="/products/<%=productinfo._id%>">جزييات</a>
+   <form method="POST" action="/admin/dell-product">
+   <input type="hidden" name="id" value="<%=productinfo._id%>">
+     <button type="Submit">حذف</button>
+   </form>
+ <%-include('../includes/add-to-cart.ejs',{productinfo:productinfo})%>
+
 
   <br>
   <br>
@@ -34,14 +35,6 @@
     
 </div>
 
-
-
- 
-
-
- 
-
-    
   </div>
 </div>
 

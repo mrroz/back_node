@@ -12,6 +12,8 @@ router.post('/add-product', adminControllers.addProduct)
 
 router.get('/product', adminControllers.showProduct)
 
+router.post('/dell-product', adminControllers.deleteOne)
+
 
 
 ////////////////////////////////////////////////////////////////                               exports
