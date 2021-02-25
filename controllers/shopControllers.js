@@ -1,4 +1,5 @@
 const productss = require('../models/singel-product')
+const mongodb = require('mongodb')
 
 module.exports.home = (req, res) => {
     productss.showAllproduct()
@@ -57,6 +58,15 @@ module.exports.addToCard = (req, res) => {
 
 module.exports.oneproduct = (req, res) => {
     const id = req.params.id
-    console.log(id);
-    res.redirect('/')
+    productss.oneproduct(id)
+        .then((result) => {
+
+            res.render('shopViews/produt-details', {
+                product: result
+            })
+
+
+        }).catch((err) => {
+            console.log('خطا در كنترلر');
+        });
 }

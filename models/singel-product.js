@@ -1,5 +1,5 @@
 const getDB = require('../util/database').getDB
-
+const mongodb = require('mongodb')
 class Product {
 
     constructor(title, descerption, price) {
@@ -34,6 +34,24 @@ class Product {
 
             });
     }
+
+    static oneproduct(id) {
+        const db = getDB()
+        return db.collection('product').find({ _id: mongodb.ObjectID(id) }).next()
+            .then((result) => {
+                console.log(result)
+                return result
+
+            }).catch((err) => {
+                console.log(err)
+                console.log('خطا در دريافت اطلاعات محصول')
+
+            });
+
+
+    }
+
+
 }
 
 module.exports = Product

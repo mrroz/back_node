@@ -12,6 +12,7 @@
   <p class="card-text"><%=productinfo.descerption%></p>
   <p class="card-text"><%=productinfo.price%></p>
   <p class="card-text"><%=productinfo.id%></p>
+   <a href="/products/<%=productinfo._id%>">جزييات</a>
  <%-include('../includes/add-to-cart.ejs',{productinfo:productinfo})%>
 
 
@@ -30,14 +31,6 @@
     
 </div>
 
-
-
- 
-
-
- 
-
-    
   </div>
 </div>
 

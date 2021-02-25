@@ -1,0 +1,37 @@
+<%-include('../includes/header.ejs')%>
+
+
+<div class="card-group">
+<div class="card" style="width:150px">
+  
+<% if (product.lengh !=0) { %>
+<img class="card-img-top" style="width:150px" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image">
+  <div class="card-body">
+  <h4 class="card-title"><%=product.title%></h4>
+  <p class="card-text"><%=product.descerption%></p>
+  <p class="card-text"><%=product.price%></p>
+  <p class="card-text"><%=product.id%></p>
+ <form action="/add-to-card" method ="POST">
+      <button >   اضاف به سبدخريد</button>
+      <input type="hidden" name="pid" value="<%=product._id%>">
+  </form> 
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+<% } else{ %>
+
+<p> noting </p>
+
+<%}%>
+    
+</div>
+
+  </div>
+</div>
+
+
+<%-include('../includes/footer.ejs')%>
