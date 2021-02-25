@@ -12,11 +12,10 @@ const mongodbConnect = (cb) => {
             console.log("connect to db !!!!!!")
             dbSet = client.db(dbName)
             cb(client)
+
         })
         .catch(err => {
-            //console.log("errrrrrrrro")
             console.log(err)
-                // throw err
         })
 
 

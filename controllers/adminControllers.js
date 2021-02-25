@@ -9,13 +9,17 @@ module.exports.addProduct = (req, res) => {
     const title = req.body.title
     const desc = req.body.desc
     const price = req.body.price
-
-
     const product6 = new productss(title, desc, price)
-    const p = productss.showAllproduct()
     product6.saveProduct()
-    console.log(p)
-    res.redirect('/')
+        .then((result) => {
+
+            console.log('product created!!!' + result);
+            res.redirect('/admin/add-product')
+
+        }).catch((err) => {
+            console.log("ssssssssssssssssssssssssss");
+
+        });
 }
 
 

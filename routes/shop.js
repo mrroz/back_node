@@ -7,7 +7,7 @@ const shopetController = require('../controllers/shopControllers')
 
 
 
-router.get('/', shopetController.checkout)
+router.get('/', shopetController.home)
     //router.get('/', shopetController.home)
 
 router.get('/cart', shopetController.showCart)
