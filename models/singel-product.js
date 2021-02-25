@@ -23,7 +23,7 @@ class Product {
     }
 
     static showAllproduct() {
-
+        //morteza roozbehi
         const db = getDB()
         return db.collection('product').find().toArray()
             .then((result) => {
